@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Datadog RUM Demo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://www.datadoghq-browser-agent.com/us1/v5/datadog-rum.js" type="text/javascript"></script>
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <h1>Datadog RUM and APM Test</h1>
+    <button id="fetchData">Fetch API Data</button>
+    <button id="fetchUsers">Fetch Users</button>
+    <button id="fetchStatus">Fetch Status</button>
+
+    <h3>Navigation</h3>
+    <ul>
+        <li><a href="page1.html">Go to Page 1</a></li>
+        <li><a href="page2.html">Go to Page 2</a></li>
+    </ul>
+    <pre id="response"></pre>
+</body>
+
+</html>

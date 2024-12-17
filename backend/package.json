@@ -1,0 +1,11 @@
+{
+    "name": "datadog-backend",
+    "version": "1.0.1",
+    "main": "server.js",
+    "dependencies": {
+        "connect-datadog": "^0.0.9",
+        "cors": "^2.8.5",
+        "dd-trace": "^5.28.0",
+        "express": "^4.21.2"
+    }
+}
