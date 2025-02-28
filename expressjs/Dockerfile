@@ -2,22 +2,24 @@
 FROM node:20
 
 # Set the working directory
-WORKDIR /usr/src/app
+WORKDIR /app
 
 # Copy only package.json and yarn.lock first to leverage Docker cache
-COPY ./backend/package.json ./backend/yarn.lock ./backend/
+COPY ./package.json ./yarn.lock ./
 
 # Install dependencies
-RUN cd backend && yarn install
+RUN yarn install
 
 # Copy the rest of the backend files
-COPY ./backend ./backend
+COPY . .
 
 # Set working directory to the backend
-WORKDIR /usr/src/app/backend
+WORKDIR /app
 
 # Expose port
 EXPOSE 3000
+EXPOSE 8125
+EXPOSE 8126
 
 # Start the server with Datadog tracer initialized
 CMD ["node", "server.js"]
