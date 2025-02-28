@@ -1,6 +1,14 @@
 # Use the official Python image from the Docker Hub as a base
 FROM python:3.11-slim
 
+# Accept build arguments
+ARG GIT_COMMIT_SHA
+ARG GIT_REPOSITORY_URL
+
+# Set as environment variables
+ENV DD_GIT_COMMIT_SHA=$GIT_COMMIT_SHA
+ENV DD_GIT_REPOSITORY_URL=$GIT_REPOSITORY_URL
+
 # Set the working directory in the container
 WORKDIR /app
 

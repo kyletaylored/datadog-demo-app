@@ -1,7 +1,7 @@
 services:
   datadog-agent:
     image: gcr.io/datadoghq/agent:7
-    container_name: dd-agent
+    container_name: datadog-agent
     pid: "host"
     environment:
       - DD_API_KEY=${DD_API_KEY}

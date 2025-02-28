@@ -3,9 +3,8 @@
 // Initialize datadog tracer before importing other modules
 const tracer = require('dd-trace').init({
     logInjection: true,
-    hostname: 'dd-agent',
-    port: 8126,
-    timeout: 20000
+    hostname: 'datadog-agent',
+    port: 8126
 });
 
 const express = require('express');
